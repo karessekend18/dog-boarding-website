@@ -2,7 +2,11 @@ import { Layout } from '@/components/Layout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+
+
 import { Calendar, Dog, Users, Star, Clock, ArrowRight, TrendingUp, Check, X } from 'lucide-react';
+
+
 
 const stats = [
   { label: 'Active Bookings', value: '12', icon: Calendar, trend: '+3 this week' },

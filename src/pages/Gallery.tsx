@@ -5,7 +5,7 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import dogsPlayingImg from '@/assets/dogs-playing.jpg';
 import dogSleepingImg from '@/assets/dog-sleeping.jpg';
 import dogWalkingImg from '@/assets/dog-walking.jpg';
-import dogGroomingImg from '@/assets/dog-grooming.jpg';
+
 import heroImage from '@/assets/hero-dog.jpg';
 
 const galleryImages = [
@@ -13,13 +13,12 @@ const galleryImages = [
   { src: dogsPlayingImg, alt: 'Dogs playing in the garden', category: 'Playtime' },
   { src: dogSleepingImg, alt: 'Cozy nap time', category: 'Indoor' },
   { src: dogWalkingImg, alt: 'Adventure time on walks', category: 'Walks' },
-  { src: dogGroomingImg, alt: 'Grooming session', category: 'Grooming' },
   { src: heroImage, alt: 'Living room relaxation', category: 'Indoor' },
   { src: dogsPlayingImg, alt: 'Outdoor fun', category: 'Playtime' },
   { src: dogSleepingImg, alt: 'Sweet dreams', category: 'Indoor' },
 ];
 
-const categories = ['All', 'Indoor', 'Playtime', 'Walks', 'Grooming'];
+const categories = ['All', 'Indoor', 'Playtime', 'Walks', ];
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
