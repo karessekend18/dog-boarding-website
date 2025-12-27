@@ -14,6 +14,9 @@ import DogRegistration from "./pages/DogRegistration";
 import AdminDashboard from "./pages/admin/Dashboard";
 import AdminCalendar from "./pages/admin/Calendar";
 import AdminBookings from "./pages/admin/Bookings";
+import CreateBooking from "./pages/admin/CreateBooking";
+import Clients from "./pages/admin/Clients";
+import ClientsDetail from "./pages/admin/ClientsDetail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,6 +39,9 @@ const App = () => (
             <Route path="/admin" element={<AdminDashboard />} />
             <Route path="/admin/calendar" element={<AdminCalendar />} />
             <Route path="/admin/bookings" element={<AdminBookings />} />
+            <Route path="/admin/create-booking" element={<CreateBooking />} />
+            <Route path="/admin/clients" element={<Clients />} />
+            <Route path="/admin/clients/:id" element={<ClientsDetail />} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>

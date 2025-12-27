@@ -156,21 +156,29 @@ export default function AdminDashboard() {
             </CardHeader>
             <CardContent>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <Button variant="outline" className="h-auto py-4 flex-col gap-2">
-                  <Calendar className="h-5 w-5" />
-                  <span>New Booking</span>
+                <Button asChild variant="outline" className="h-auto py-4 flex-col gap-2">
+                  <Link to="/admin/create-booking">
+                    <Calendar className="h-5 w-5" />
+                    <span>New Booking</span>
+                  </Link>
                 </Button>
-                <Button variant="outline" className="h-auto py-4 flex-col gap-2">
-                  <Dog className="h-5 w-5" />
-                  <span>Add New Dog</span>
+                <Button asChild variant="outline" className="h-auto py-4 flex-col gap-2">
+                  <Link to="/register-dog">
+                    <Dog className="h-5 w-5" />
+                    <span>Add New Dog</span>
+                  </Link>
                 </Button>
-                <Button variant="outline" className="h-auto py-4 flex-col gap-2">
-                  <Users className="h-5 w-5" />
-                  <span>View Clients</span>
+                <Button asChild variant="outline" className="h-auto py-4 flex-col gap-2">
+                  <Link to="/admin/clients">
+                    <Users className="h-5 w-5" />
+                    <span>View Clients</span>
+                  </Link>
                 </Button>
-                <Button variant="outline" className="h-auto py-4 flex-col gap-2">
-                  <Star className="h-5 w-5" />
-                  <span>View Reviews</span>
+                <Button asChild variant="outline" className="h-auto py-4 flex-col gap-2">
+                  <Link to="/feedback">
+                    <Star className="h-5 w-5" />
+                    <span>View Reviews</span>
+                  </Link>
                 </Button>
               </div>
             </CardContent>

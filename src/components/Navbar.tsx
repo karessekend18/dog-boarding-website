@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Dog, Menu, X, User, LogOut } from 'lucide-react';
+import { Menu, X, User, LogOut } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/contexts/AuthContext';
 import {
@@ -38,7 +38,7 @@ export function Navbar() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <Dog className="h-8 w-8 text-primary transition-transform group-hover:scale-110" />
+            <img src="/favicon.ico" alt="logo" className="h-8 w-8 object-contain transition-transform group-hover:scale-110" />
             <span className="font-display text-xl font-bold text-primary">Cheezy's Homestay For Dogs</span>
           </Link>
 
