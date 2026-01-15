@@ -27,9 +27,12 @@ export default function AdminLogin() {
 
     try {
       await login(username, password);
-      console.log("🟢 login() resolved");
-      toast({ title: "Login successful" });
-      navigate("/admin/dashboard");
+
+      // force browser to see token before dashboard loads
+      setTimeout(() => {
+        navigate("/admin/dashboard");
+      }, 0);
+
     } catch (err) {
       console.error("🔴 login() failed", err);
       toast({

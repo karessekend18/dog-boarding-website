@@ -47,7 +47,7 @@ const services = [
     id: 'walking',
     icon: MapPin,
     title: 'Dog Walking',
-    description: 'Regular exercise and adventure in the great outdoors with our experienced walkers.',
+    description: 'Regular exercise and adventure in the outdoors.',
     image: dogWalkingImg,
     price: '$20',
     priceUnit: 'per 30-min walk',

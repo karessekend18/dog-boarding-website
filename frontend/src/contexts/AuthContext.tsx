@@ -26,22 +26,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const login = async (username: string, password: string) => {
-    console.log("🔥 AuthContext login called", username, password);
-    console.log("🔥 FETCH URL", `${API}/api/auth/login`);
-
     const res = await fetch(`${API}/api/auth/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
     });
 
-    if (!res.ok) {
-      throw new Error("Invalid credentials");
-    }
+    if (!res.ok) throw new Error("Invalid credentials");
 
     const data = await res.json();
-    localStorage.setItem(TOKEN_KEY, data.token);
-    setUserRole("admin");
+
+    localStorage.setItem(TOKEN_KEY, data.token); // 🔥 REQUIRED
+    setUserRole(data.role);
   };
 
 
